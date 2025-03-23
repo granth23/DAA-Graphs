@@ -129,4 +129,3 @@ For further details, experimental observations, and updates, please visit our pr
 
 A comprehensive report that includes descriptions of the algorithms and experimental observations is available at:  
 `static/files/report.pdf`
-```

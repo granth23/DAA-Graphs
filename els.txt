@@ -144,7 +144,7 @@ void findallmaximalcliquescliques(const graph& graph1, int& cliquecount1, int& m
     
     if (nodecount1 == 0) return;
     
-    cout << "Computing degeneracy ordering..." << endl;
+    // cout << "Computing degeneracy ordering..." << endl;
     vector<int> ordering1 = computedegeneracyordering(graph1);
     
     int degeneracy1 = 0;
@@ -160,12 +160,12 @@ void findallmaximalcliquescliques(const graph& graph1, int& cliquecount1, int& m
         }
         degeneracy1 = max(degeneracy1, laterneighbors1);
     }
-    cout << "Graph degeneracy: " << degeneracy1 << endl;
+    // cout << "Graph degeneracy: " << degeneracy1 << endl;
     
     unordered_map<int, int> nodeposition1;
     for (int idx1 = 0; idx1 < ordering1.size(); idx1++) nodeposition1[ordering1[idx1]] = idx1;
     
-    cout << "Finding maximal cliques..." << endl;
+    // cout << "Finding maximal cliques..." << endl;
     const int maxrecursiondepth1 = 1000000;
     
     for (int idx1 = 0; idx1 < ordering1.size(); idx1++) {
@@ -263,14 +263,14 @@ int main() {
     unordered_map<int, int> externaltointernalid1;
     unordered_map<int, int> internaltoexternalid1;
 
-    cout << "Loading graph from file..." << endl;
-    graph graph1 = loadgraphfromfilefile("input.txt", nodecount1, edgecount1, 
+    // cout << "Loading graph from file..." << endl;
+    graph graph1 = loadgraphfromfilefile("skitter.txt", nodecount1, edgecount1, 
                     externaltointernalid1, internaltoexternalid1);
     
     if (graph1.empty()) { cout << "Failed to load the graph from file." << endl; return 1; }
     
-    cout << "Graph loaded: " << nodecount1 << " nodes, " << edgecount1 << " edges" << endl;
-    cout << "Finding cliques... (this may take a while)" << endl;
+    // cout << "Graph loaded: " << nodecount1 << " nodes, " << edgecount1 << " edges" << endl;
+    // cout << "Finding cliques... (this may take a while)" << endl;
     
     int totalcliques1 = 0; int largestcliquesize1 = 0;
     set<int> largestcliquenodes1; map<int, int> cliquedistribution1;
@@ -278,7 +278,7 @@ int main() {
     findallmaximalcliquescliques(graph1, totalcliques1, largestcliquesize1, largestcliquenodes1,
                         internaltoexternalid1, cliquedistribution1);
     
-    cout << "\n========== RESULTS ==========\n" << endl;
+    // cout << "\n========== RESULTS ==========\n" << endl;
     cout << "Total Maximal Cliques: " << totalcliques1 << endl;
     cout << "Largest Clique Size:   " << largestcliquesize1 << endl;
     

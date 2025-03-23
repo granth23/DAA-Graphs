@@ -12,6 +12,7 @@ using namespace std;
 
 class FindingCliques {
 public:
+
     vector<int> Q;
     vector<vector<int> > adjlist;
     unordered_map<int, int> nodes;

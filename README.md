@@ -127,5 +127,5 @@ For further details, experimental observations, and updates, please visit our pr
 
 ## Detailed Report
 
-A comprehensive [report](https://github.com/granth23/DAA-Graphs/blob/main/static/files/report.pdf) that includes descriptions of the algorithms and experimental observations is available at:  
-`static/files/report.pdf`
+A comprehensive [report](https://github.com/granth23/DAA-Graphs/blob/main/static/files/daa-report.pdf) that includes descriptions of the algorithms and experimental observations is available at:  
+`static/files/daa-report.pdf`

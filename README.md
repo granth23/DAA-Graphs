@@ -9,16 +9,58 @@ project-root/
 ├── code/
 │   ├── els.cpp        // ELS algorithm implementation
 │   ├── tomita.cpp     // Tomita algorithm implementation
-│   ├── chiba.cpp      // Chiba algorithm implementation
-│   ├── skitter.txt    // Dataset for analysis
-│   ├── enron.txt      // Dataset for analysis
-│   └── wiki.txt       // Dataset for analysis
+│   └── chiba.cpp      // Chiba algorithm implementation
+
 ├── static/
 │   └── files/
 │       ├── report.pdf // Detailed report (algorithms description and experimental observations)
 │       └── ...    
 └── README.md
 ```
+
+## Dataset Preparation
+
+1. **Download the Datasets:**
+
+   - [Email-Enron dataset](https://snap.stanford.edu/data/email-Enron.html)
+   - [AS-Skitter dataset](https://snap.stanford.edu/data/as-Skitter.html)
+   - [Wiki-Vote dataset](https://snap.stanford.edu/data/wiki-Vote.html)
+
+2. **Extract and Organize Files:**
+
+   - Download the ZIP file for each dataset.
+   - Unzip each file.
+   - Locate the text file containing the graph data from each dataset.
+
+3. **Place and Rename Files:**
+
+   - Move the text files into the `code` directory.
+   - Rename the files as follows:
+     - Enron dataset → `enron.txt`
+     - Wiki-Vote dataset → `wiki.txt`
+     - AS-Skitter dataset → `skitter.txt`
+
+4. **File Format Adjustments:**
+
+   - **Remove Comments:**  
+     Remove any comments at the top of each file.
+     
+   - **Set Header Format:**  
+     Ensure the first non-comment line contains the number of nodes and edges in the following format:
+     ```
+     NODES    EDGES
+     ```
+     For example, for `WIKI.TXT`, the file should begin with a line similar to:
+     ```
+     7115    103689
+     ```
+     followed by the list of edges:
+     ```
+     30    1412
+     30    3352
+     ...
+     ```
+    The actual node and edge values are provided in the original TXT file.
 
 ## Compilation Instructions
 

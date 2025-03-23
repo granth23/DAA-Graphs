@@ -73,11 +73,11 @@ project-root/
 2. **Modify Dataset File Names in Source Files:**
 
    - **ELS Algorithm (`els.cpp`):**
-     - Open `els.cpp` and go to **line 288**.
+     - Open `els.cpp` and go to **line 267**.
      - Change the dataset file name to one of: `skitter.txt`, `enron.txt`, or `wiki.txt` as needed.
      
    - **Tomita Algorithm (`tomita.cpp`):**
-     - Open `tomita.cpp` and go to **line 150**.
+     - Open `tomita.cpp` and go to **line 151**.
      - Change the dataset file name to one of: `skitter.txt`, `enron.txt`, or `wiki.txt` as needed.
      
    - **Chiba Algorithm (`chiba.cpp`):**

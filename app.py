@@ -13,10 +13,11 @@ students = [
 
 # Graph Algorithms Report
 graph_algos = [
-    {"name": "Dijkstra's Algorithm", "complexity": "O(V^2) or O(E + V log V)", "runtime": "Efficient for shortest path", "source": "dijkstra"},
-    {"name": "Kruskal's Algorithm", "complexity": "O(E log E)", "runtime": "Used for Minimum Spanning Tree", "source": "kruskal"},
-    {"name": "Floyd-Warshall Algorithm", "complexity": "O(V^3)", "runtime": "All-pairs shortest paths", "source": "floyd_warshall"}
+    {"name": "Tomita's Algorithm", "complexity": "O\\left(3^{\\frac{n}{3}}\\right)", "source": "Tomita"},
+    {"name": "ELS's Algorithm", "complexity": "O\\left(d n 3^{\\frac{d}{3}}\\right)", "source": "ELS"},
+    {"name": "Chiba's Algorithm", "complexity": "O\\left(a G(m)\\right)", "source": "Chiba"}
 ]
+
 
 @app.route('/')
 def home():
@@ -24,12 +25,13 @@ def home():
 
 @app.route('/source/<algo_name>')
 def source(algo_name):
-    algo_sources = {
-        "dijkstra": "# Dijkstra's Algorithm\ndef dijkstra(graph, src):\n    pass",
-        "kruskal": "# Kruskal's Algorithm\ndef kruskal(edges, nodes):\n    pass",
-        "floyd_warshall": "# Floyd-Warshall Algorithm\ndef floyd_warshall(graph):\n    pass"
-    }
-    source_code = algo_sources.get(algo_name.lower(), "Algorithm not found")
+    filename = f"{algo_name.lower()}.txt"
+    try:
+        # Open and read the content of the file
+        with open(filename, "r") as file:
+            source_code = file.read()
+    except FileNotFoundError:
+        source_code = "Algorithm not found"
     return render_template('source.html', algo_name=algo_name, source_code=source_code)
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 # Graph Algorithms Project
 
-This repository contains the C/C++ implementations of three graph algorithms along with experimental observations using three datasets. The algorithms have been optimized using the `-O3` flag. Detailed descriptions of the algorithms and experimental results are provided in the report.
+This repository contains the C/C++ implementations of three graph algorithms along with experimental observations using three datasets. The algorithms have been optimized using the `-O1` flag. Detailed descriptions of the algorithms and experimental results are provided in the report.
 
 ## Repository Structure
 
@@ -20,9 +20,7 @@ project-root/
 
 1. **Download the Datasets:**
 
-   - [Email-Enron dataset](https://snap.stanford.edu/data/email-Enron.html)
-   - [AS-Skitter dataset](https://snap.stanford.edu/data/as-Skitter.html)
-   - [Wiki-Vote dataset](https://snap.stanford.edu/data/wiki-Vote.html)
+   - [Link to all Datasets used](https://drive.google.com/drive/folders/1LbEqNUr8AyXq-TrD-QFGfzB5xvncFHc_?usp=drive_link)
 
 2. **File Format**
 
@@ -50,13 +48,13 @@ project-root/
 
    - Compile `exact.cpp`:
      ```bash
-     g++ -O3 -o exact exact.cpp
+     g++ -O1 -o exact exact.cpp
      exact.exe <filename.txt> (Windows)
      ./exact.exe <filename.txt>(Unix)
      ```
    - Compile `coreexact.cpp`:
      ```bash
-     g++ -O3 -o coreexact coreexact.cpp
+     g++ -O1 -o coreexact coreexact.cpp
      coreexact.exe <filename.txt> (Windows)
      ./coreexact.exe <filename.txt>(Unix)
      ```

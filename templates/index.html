@@ -19,46 +19,16 @@
             <thead class="table-dark">
                 <tr>
                     <th>Algorithm</th>
-                    <th>Complexity</th>
                 </tr>
             </thead>
             <tbody>
                 {% for algo in graph_algos %}
                 <tr>
                     <td><a href="/source/{{ algo.source }}">{{ algo.name }}</a></td>
-                    <td>\( {{ algo.complexity }} \)</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-
-        <!-- New section for Clique Distribution images -->
-        <h2 class="text-center mt-4">Clique Distribution</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h4 class="text-center">Wiki-Vote Network</h2>
-                <img src="{{ url_for('static', filename='files/Histo-email.jpeg') }}" class="img-fluid" alt="Image 1">
-                <p>Largest Clique Size: <b>17</b></p>
-                <p>Total Maximal Cliques: <b>459002</b></p>
-            </div>
-            <div class="col-md-4">
-                <h4 class="text-center">Skitter Network</h2>
-                <img src="{{ url_for('static', filename='files/Histo-skitter.jpeg') }}" class="img-fluid" alt="Image 2">
-                <p>Largest Clique Size: <b>67</b></p>
-                <p>Total Maximal Cliques: <b>37322355</b></p>
-            </div>
-            <div class="col-md-4">
-                <h4 class="text-center">Enron Network</h2>
-                <img src="{{ url_for('static', filename='files/Histo-wiki.jpeg') }}" class="img-fluid" alt="Image 3">
-                <p>Largest Clique Size: <b>20</b></p>
-                <p>Total Maximal Cliques: <b>226859</b></p>
-            </div>
-        </div>
-
-        <h2 class="text-center mt-4">Time Distribution</h2>
-        <center>
-        <img src="{{ url_for('static', filename='files/times.jpeg') }}" class="img-fluid" alt="Image 3" style="width: 50%;">
-        </center>
 
         <br>
         <br>

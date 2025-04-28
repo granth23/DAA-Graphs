@@ -13,9 +13,11 @@ students = [
 
 # Graph Algorithms Report
 graph_algos = [
-    {"name": "Tomita's Algorithm", "complexity": "O\\left(3^{\\frac{n}{3}}\\right)", "source": "Tomita"},
-    {"name": "ELS's Algorithm", "complexity": "O\\left(d n 3^{\\frac{d}{3}}\\right)", "source": "ELS"},
-    {"name": "Chiba's Algorithm", "complexity": "O\\left(a G(m)\\right)", "source": "Chiba"}
+    # {"name": "Tomita's Algorithm", "complexity": "O\\left(3^{\\frac{n}{3}}\\right)", "source": "Tomita"},
+    # {"name": "ELS's Algorithm", "complexity": "O\\left(d n 3^{\\frac{d}{3}}\\right)", "source": "ELS"},
+    # {"name": "Chiba's Algorithm", "complexity": "O\\left(a G(m)\\right)", "source": "Chiba"}
+    {"name": "Exact Algorithm", "source": "Exact"},
+    {"name": "CoreExact Algorithm", "source": "CoreExact"}
 ]
 
 

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "bitset": "cpp",
+        "set": "cpp",
+        "format": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "ostream": "cpp"
+    }
+}

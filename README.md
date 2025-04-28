@@ -7,8 +7,8 @@ This repository contains the C/C++ implementations of three graph algorithms alo
 ```
 project-root/
 ├── code/
-│   ├── exact.cpp        // ELS algorithm implementation
-│   └── coreexact.cpp      // Chiba algorithm implementation
+│   ├── exact.cpp          // Exact algorithm implementation
+│   └── coreexact.cpp      // CoreExact algorithm implementation
 ├── static/
 │   └── files/
 │       ├── report.pdf // Detailed report (algorithms description and experimental observations)
